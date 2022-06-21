@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Text to Speech</string>
+    <string name="que">2*2 = ?</string>
+    <string name="ans">Answer:</string>
+    <string name="note">Note: Press the mic button to start recording.\nPress it again to stop recording.</string>
+</resources>
