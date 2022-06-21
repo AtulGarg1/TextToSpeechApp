@@ -73,8 +73,16 @@ class MainActivity : AppCompatActivity() {
                 val speech = p0?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
 
                 if(!speech.isNullOrEmpty()) {
-                    if(speech[0].equals("4")) Snackbar.make(root, "Correct Answer!!", Snackbar.LENGTH_LONG).show()
-                    else Snackbar.make(root, "Incorrect Answer.", Snackbar.LENGTH_LONG).show()
+                    if(speech[0].equals("4")) {
+                        tts.setPitch(1f)
+                        tts.setSpeechRate(0.8f)
+                        tts.speak("correct", TextToSpeech.QUEUE_FLUSH, null, null)
+                    }
+                    else {
+                        tts.setPitch(1f)
+                        tts.setSpeechRate(0.8f)
+                        tts.speak("incorrect", TextToSpeech.QUEUE_FLUSH, null, null)
+                    }
                 }
             }
 
